@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: sans-serif
+}
+
+input {
+    margin-top: 15px;
+    height: 30px;
+    width: 170px;
+    border-radius: 5px;
+}
+
+.container{
+    width: 50%;
+    margin: 0 auto;
+    background-color: #aaa;
+}
+.header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.form{
+    margin-left: 20px;
+    /* justify-content: start; */
+}
+
+#random{
+    height: 40px;
+    width: 170px;
+    margin-right: 20px;
+}
+
+.border{
+    height: 50px;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 33% 30% 30%;
+}
+
+img{
+    width: 150px;
+    height: 150px;
+}

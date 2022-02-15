@@ -8,7 +8,7 @@ const addPhoto = async function(req, res){
         const imagename = req.file.filename;
         const mimetype = req.file.mimetype;
         const imagepath = req.file.path;
-        const path = '/home/ivankrtv/nodejs/gallery/images/'; // Для храния в БД пути к картинке
+        const path = '/home/ivankrtv/nodejs/test_task/gallery_node.js/images/'; // Для храния в БД пути к картинке
 
         const PNG = 'image/png';
         const JPEG = 'image/jpeg';
