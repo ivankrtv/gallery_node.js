@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #image{
+            width: 500px;
+            height: 500px;
+        }
+        .container{
+            width: 500px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body onload="getRandomImage()">
+    <div class="container">
+        <h2 id="name"></h2>
+        <img src="" alt="" id="image">
+    </div>
+
+    <script>
+        onload = async function(){
+            const res = await fetch('http://localhost:3000/api/photo', { method: 'GET' });
+
+            console.log(res);
+            const image = document.getElementById("image");
+            const name = document.getElementById("name");
+
+            if(res.status === 200){
+                const data = await res.json();
+                console.log(data);
+
+                image.src = data.image;
+                name.innerText = data.name;
+            }
+            else{
+                name.innerText = "Получить изображение не удалось";
+            }
+
+        }
+    </script>
+</body>
+</html>

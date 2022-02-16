@@ -4,7 +4,8 @@
 }
 
 body{
-    font-family: sans-serif
+    /* font-family: sans-serif; */
+    min-height: 100vh;
 }
 
 input {
@@ -15,14 +16,14 @@ input {
 }
 
 .container{
-    width: 50%;
+    width: 70%;
     margin: 0 auto;
-    background-color: #aaa;
+    background-color: #ccc;
 }
 .header{
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 .form{
     margin-left: 20px;
@@ -42,9 +43,20 @@ input {
 .grid{
     display: grid;
     grid-template-columns: 33% 30% 30%;
+    justify-content: center;
+    align-items: center;
+}
+
+.post{
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 img{
-    width: 150px;
-    height: 150px;
+    background-color: #aaa;
+    width: 200px;
+    height: 200px;
 }

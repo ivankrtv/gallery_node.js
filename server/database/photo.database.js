@@ -24,7 +24,7 @@ const getPhoto = async function(offset){
 
 const getPartPhotos = async function(offset){
     try{
-        const imagename = await db.any('SELECT name, image FROM photos ORDER BY id DESC LIMIT 9 OFFSET $1', offset);
+        const imagename = await db.any('SELECT name, image FROM photos ORDER BY id ASC LIMIT 9 OFFSET $1', offset);
         return imagename;
     }
     catch(exception){

@@ -51,7 +51,7 @@ const getRandomImage = async function(req, res){
         const photo = await photoDatabase.getPhoto(randomPhoto);
 
         if( photo !== undefined ){
-            res.status(200).json(photo);
+            res.status(200).json(photo[0]);
         }
         else{
             res.status(400).json({ message: "Произошла ошибка при подключении к БД" });
